@@ -1,4 +1,8 @@
 language: objective-c
+branches:
+    only:
+        - master
+        - develop
 osx_image: xcode7.3
 xcode_project: HHMACSwift.xcodeproj
 xcode_scheme: HHMACSwift
