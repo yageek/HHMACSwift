@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import CryptoSwift
 
 extension NSURLRequest {
 
@@ -36,11 +36,14 @@ extension NSURLRequest {
         }
     }
 
-    public func hash(date: NSDate, publicKey: String, secretKey: String) -> String {
+    public func hash(date: NSDate, publicKey: String, secretKey: String, variant: HMAC.Variant) -> String {
 
-        let args = [self.characteristic, "\(date.timeIntervalSince1970)", publicKey]
+        let args = [self.characteristic, "\(Int64(date.timeIntervalSince1970*1e9))", publicKey]
         let signRaw = args.joinWithSeparator("_")
 
-        return signRaw
+        let key = secretKey.utf8.map({$0})
+        let message = signRaw.utf8.map({$0})
+
+        return try! Authenticator.HMAC(key: key, variant: variant).authenticate(message).toBase64()!
     }
 }
