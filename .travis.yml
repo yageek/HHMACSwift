@@ -9,4 +9,4 @@ before_install:
 before_script:
 - carthage bootstrap
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash) -J HHMacSwift

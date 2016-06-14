@@ -33,6 +33,7 @@
 		0B0C303C1D10047F00A8A312 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B0C303D1D10047F00A8A312 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0B0C30411D10078900A8A312 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		0B2A95F21D101B7500F0398A /* publish-doc.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "publish-doc.sh"; sourceTree = "<group>"; };
 		0B68EBF71CBBD3AC008151B3 /* HHMACSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HHMACSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B68EBFA1CBBD3AC008151B3 /* HHMACSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHMACSwift.h; sourceTree = "<group>"; };
 		0B68EBFC1CBBD3AC008151B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,9 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2A95F11D101B6800F0398A /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				0B2A95F21D101B7500F0398A /* publish-doc.sh */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
 		0B68EBED1CBBD3AC008151B3 = {
 			isa = PBXGroup;
 			children = (
+				0B2A95F11D101B6800F0398A /* utility */,
 				0B0C30411D10078900A8A312 /* .travis.yml */,
 				0B0C303C1D10047F00A8A312 /* README.md */,
 				0B0C303D1D10047F00A8A312 /* LICENSE */,

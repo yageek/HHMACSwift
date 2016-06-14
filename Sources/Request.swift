@@ -11,6 +11,11 @@ import CryptoSwift
 
 extension NSURLRequest {
 
+    /**
+      The characteristic that will be hashed.
+      - returns: The characteristic before encoding.
+    */
+
     public var characteristic: String {
         get {
 
@@ -36,6 +41,14 @@ extension NSURLRequest {
         }
     }
 
+    /**
+      The hash function used for the Signature
+      
+      - parameter date: The date used for the hash
+      - parameter publicKey: The public key.
+      - parameter secretKey: The secret key.
+      - parameter variant: A *CryptoSwift* variant for computing the HMAC
+    */
     public func hash(date: NSDate, publicKey: String, secretKey: String, variant: HMAC.Variant) -> String {
 
         let args = [self.characteristic, "\(Int64(date.timeIntervalSince1970*1e9))", publicKey]
