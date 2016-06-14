@@ -6,7 +6,9 @@ xcode_sdk: iphonesimulator9.3
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
+- gem install jazzy
 before_script:
 - carthage bootstrap
 after_success:
 - bash <(curl -s https://codecov.io/bash) -J HHMacSwift
+- utility/publish-doc.sh

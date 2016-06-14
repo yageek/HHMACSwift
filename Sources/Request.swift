@@ -9,11 +9,14 @@
 import Foundation
 import CryptoSwift
 
+/**
+ An extension for computing HMAC signature.
+*/
 extension NSURLRequest {
 
     /**
       The characteristic that will be hashed.
-      - returns: The characteristic before encoding.
+      - returns : The characteristic before encoding.
     */
 
     public var characteristic: String {
