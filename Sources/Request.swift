@@ -30,7 +30,6 @@ extension NSURLRequest {
                 let method = self.HTTPMethod
             else { return "" }
 
-
             var args = [method.lowercaseString, host]
             args.appendContentsOf(path.componentsSeparatedByString("/"))
 
